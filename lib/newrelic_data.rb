@@ -66,10 +66,10 @@ class NewRelicData
   #
   # == Example:
   #
-  # nr.configure( :query_params => { :metrics => [ "Apdex" ], :field => "score" },
-  #               :format => "xml",
-  #               :account => 4321, 
-  #               :application => 654321 )
+  #     nr.configure( :query_params => { :metrics => [ "Apdex" ], :field => "score" },
+  #                   :format => "xml",
+  #                   :account => 4321, 
+  #                   :application => 654321 )
   def configure opts
     opts.each do |key,val| 
       self.send("#{key}=".to_sym, val)
