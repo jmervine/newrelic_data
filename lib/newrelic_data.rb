@@ -10,7 +10,7 @@ require 'uri'
 class NewRelicData
 
   # Version for gem.
-  VERSION = "0.0.2"
+  VERSION = "0.0.3"
 
   # @return [String] NewRelic API key.
   attr_accessor :api_key
