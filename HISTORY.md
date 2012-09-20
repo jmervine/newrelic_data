@@ -1,6 +1,11 @@
 NewRelicData History
 ====================
 
+### 0.0.4
+
+* Added n.hours_ago
+* Added NewRelicData.date_formatter(...str...)
+
 ### 0.0.2
 
 * Made work.
