@@ -206,5 +206,9 @@ class Integer
     (DateTime.now-self).strftime("%Y-%m-%dT00:00:00Z")
   end
   alias :day_ago :days_ago
+  def hours_ago
+    (DateTime.now-self/24.0).strftime("%Y-%m-%dT%H:00:00Z")
+  end
+  alias :hour_ago :hours_ago
 end
 

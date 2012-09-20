@@ -154,4 +154,14 @@ describe Integer, "monkey patch" do
       end
     end
   end
+  describe :hours_ago do
+    (-5..5).each do |n|
+      n = n*7
+      it "it should return '#{n}' hours ago" do
+        DateTime.stub(:now).and_return(DateTime.parse("2012-06-07 22:30"))
+        Time.stub(:now).and_return(DateTime.parse("2012-06-07 22:30").to_time)
+        DateTime.parse(n.hours_ago).should eq DateTime.parse("2012-06-07 22:00")-(n/24.0)
+      end
+    end
+  end
 end
