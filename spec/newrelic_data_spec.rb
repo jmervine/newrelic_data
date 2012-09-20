@@ -142,6 +142,20 @@ describe NewRelicData do
       @n.yesterday.should eq "2012-06-06T00:00:00Z"
     end
   end
+
+  describe :date_formatter do
+    it "should format date" do
+      DateTime.stub(:now).and_return(DateTime.parse("2012-06-07 22:22:22"))
+      @n.date_formatter(DateTime.now).should eq "2012-06-07T22:22:22Z"
+    end
+  end
+  describe ".date_formatter" do
+    it "should format date" do
+      DateTime.stub(:now).and_return(DateTime.parse("2012-06-07 22:22:22"))
+      NewRelicData.date_formatter(DateTime.now).should eq "2012-06-07T22:22:22Z"
+    end
+  end
+
 end
 
 describe Integer, "monkey patch" do

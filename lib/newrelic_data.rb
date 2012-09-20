@@ -195,6 +195,15 @@ class NewRelicData
     1.day_ago
   end
 
+  # @return [String] Formatted date / time
+  def self.date_formatter(date_time)
+    date_time.strftime("%Y-%m-%dT%H:%M:%SZ")
+  end
+
+  def date_formatter(date_time)
+    self.class.date_formatter(date_time)
+  end
+
 end
 
 # Monkey patch of the [Integer] object for quickly generating
