@@ -10,7 +10,7 @@ task :pages do
   puts %x{ set -x; mv -v /tmp/coverage . }
   puts %x{ set -x; git add . } 
   puts %x{ set -x; git commit --all -m "updating doc and coverage" }
-  puts %x{ set -x; git checkout - }
+  puts %x{ set -x; git checkout master }
   puts "don't forget to run: git push origin gh-pages"
 
 end
