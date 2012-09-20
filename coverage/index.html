@@ -23,7 +23,7 @@
       <img src="./assets/0.5.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-09-20T15:55:09-07:00">2012-09-20T15:55:09-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-09-20T16:30:28-07:00">2012-09-20T16:30:28-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -34,15 +34,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.5
+         6.3
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>81</b> relevant lines. 
-    <span class="green"><b>81</b> lines covered</span> and
+    <b>85</b> relevant lines. 
+    <span class="green"><b>85</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -62,11 +62,11 @@
       <tr>
         <td class="strong"><a href="#1830df341a35faefad30d6ad06d8efa80fcc87e6" class="src_link" title="lib/newrelic_data.rb">lib/newrelic_data.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>214</td>
-        <td>81</td>
-        <td>81</td>
+        <td>223</td>
+        <td>85</td>
+        <td>85</td>
         <td>0</td>
-        <td>6.5</td>
+        <td>6.3</td>
       </tr>
       
     </tbody>
@@ -90,8 +90,8 @@
     <h3>lib/newrelic_data.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>81</b> relevant lines. 
-      <span class="green"><b>81</b> lines covered</span> and
+      <b>85</b> relevant lines. 
+      <span class="green"><b>85</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1284,100 +1284,154 @@
         <li class="never" data-hits="" data-linenumber="198">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  # @return [String] Formatted date / time</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="199">
+        <li class="covered" data-hits="1" data-linenumber="199">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  def self.date_formatter(date_time)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="200">
+        <li class="covered" data-hits="2" data-linenumber="200">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"># Monkey patch of the [Integer] object for quickly generating</code>
+          <code class="ruby">    date_time.strftime(&quot;%Y-%m-%dT%H:%M:%SZ&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="201">
           
           
-          <code class="ruby"># {NewRelicData#query_params} options 'begin' and 'end'.</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="202">
+        <li class="never" data-hits="" data-linenumber="202">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="203">
           <span class="hits">1</span>
           
-          <code class="ruby">class Integer</code>
+          <code class="ruby">  def date_formatter(date_time)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="203">
-          
-          
-          <code class="ruby">  # @return [String] formated for {NewRelicData#query_params} 'begin' and 'end'.</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="204">
-          
-          
-          <code class="ruby">  # * N.days_ago at '00:00:00'</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="205">
+        <li class="covered" data-hits="1" data-linenumber="204">
           <span class="hits">1</span>
           
-          <code class="ruby">  def days_ago</code>
+          <code class="ruby">    self.class.date_formatter(date_time)</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="206">
-          <span class="hits">23</span>
+        <li class="never" data-hits="" data-linenumber="205">
           
-          <code class="ruby">    (DateTime.now-self).strftime(&quot;%Y-%m-%dT00:00:00Z&quot;)</code>
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="206">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="207">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="208">
+        <li class="never" data-hits="" data-linenumber="208">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="209">
+          
+          
+          <code class="ruby"># Monkey patch of the [Integer] object for quickly generating</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="210">
+          
+          
+          <code class="ruby"># {NewRelicData#query_params} options 'begin' and 'end'.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="211">
           <span class="hits">1</span>
           
-          <code class="ruby">  alias :day_ago :days_ago</code>
+          <code class="ruby">class Integer</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="209">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def hours_ago</code>
-        </li>
-      
-        <li class="covered" data-hits="11" data-linenumber="210">
-          <span class="hits">11</span>
-          
-          <code class="ruby">    (DateTime.now-self/24.0).strftime(&quot;%Y-%m-%dT%H:00:00Z&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="211">
+        <li class="never" data-hits="" data-linenumber="212">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="212">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  alias :hour_ago :hours_ago</code>
+          <code class="ruby">  # @return [String] formated for {NewRelicData#query_params} 'begin' and 'end'.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="213">
           
           
+          <code class="ruby">  # * N.days_ago at '00:00:00'</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="214">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def days_ago</code>
+        </li>
+      
+        <li class="covered" data-hits="23" data-linenumber="215">
+          <span class="hits">23</span>
+          
+          <code class="ruby">    (DateTime.now-self).strftime(&quot;%Y-%m-%dT00:00:00Z&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="216">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="217">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  alias :day_ago :days_ago</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="218">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def hours_ago</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="219">
+          <span class="hits">11</span>
+          
+          <code class="ruby">    (DateTime.now-self/24.0).strftime(&quot;%Y-%m-%dT%H:00:00Z&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="220">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="221">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  alias :hour_ago :hours_ago</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="222">
+          
+          
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="214">
+        <li class="never" data-hits="" data-linenumber="223">
           
           
           <code class="ruby"></code>
