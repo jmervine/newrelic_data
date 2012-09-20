@@ -101,11 +101,9 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Monkey patch of the [Integer] object for quickly generating
-<span class='object_link'><a href="NewRelicData.html#query_params-instance_method" title="NewRelicData#query_params (method)">NewRelicData#query_params</a></span> options &#8216;begin&#8217; and
-&#8216;end&#8217;.
-</p>
+    
+<p>Monkey patch of the [Integer] object for quickly generating
+<span class='object_link'><a href="NewRelicData.html#query_params-instance_method" title="NewRelicData#query_params (method)">NewRelicData#query_params</a></span> options 'begin' and 'end'.</p>
 
 
   </div>
@@ -147,13 +145,34 @@ Monkey patch of the [Integer] object for quickly generating
   
 
   
-    <span class="summary_desc"><div class='inline'><ul>
-<li><p>
-N.days_ago at &#8216;00:00:00&#8217;.
-</p>
-</li>
-</ul>
+    <span class="summary_desc"><div class='inline'><ul><li>
+<p>N.days_ago at '00:00:00'.</p>
+</li></ul>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hours_ago-instance_method" title="#hours_ago (instance method)">- (Object) <strong>hours_ago</strong> </a>
+    
+
+    
+      (also: #hour_ago)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -182,12 +201,9 @@ N.days_ago at &#8216;00:00:00&#8217;.
   
 </h3><div class="docstring">
   <div class="discussion">
-    <ul>
-<li><p>
-N.days_ago at &#8216;00:00:00&#8217;
-</p>
-</li>
-</ul>
+    <ul><li>
+<p>N.days_ago at '00:00:00'</p>
+</li></ul>
 
 
   </div>
@@ -205,10 +221,8 @@ N.days_ago at &#8216;00:00:00&#8217;
       
       
         &mdash;
-        <div class='inline'><p>
-formated for <span class='object_link'><a href="NewRelicData.html#query_params-instance_method" title="NewRelicData#query_params (method)">NewRelicData#query_params</a></span> &#8216;begin&#8217; and
-&#8216;end&#8217;.
-</p>
+        <div class='inline'>
+<p>formated for <span class='object_link'><a href="NewRelicData.html#query_params-instance_method" title="NewRelicData#query_params (method)">NewRelicData#query_params</a></span> 'begin' and 'end'.</p>
 </div>
       
     </li>
@@ -236,14 +250,48 @@ formated for <span class='object_link'><a href="NewRelicData.html#query_params-i
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="hours_ago-instance_method">
+  
+    - (<tt>Object</tt>) <strong>hours_ago</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='hour_ago-instance_method'>hour_ago</span></span>
+    </span>
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/newrelic_data.rb', line 209</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hours_ago'>hours_ago</span>
+  <span class='lparen'>(</span><span class='const'>DateTime</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='op'>-</span><span class='kw'>self</span><span class='op'>/</span><span class='float'>24.0</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y-%m-%dT%H:00:00Z</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on Mon Aug  6 16:18:23 2012 by
+  Generated on Thu Sep 20 15:55:10 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.2.1 (ruby-1.9.2).
+  0.8.2.1 (ruby-1.9.3).
 </div>
 
   </body>
